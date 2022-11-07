@@ -1,1 +1,55 @@
+body {
+    background-color: antiquewhite;
+    background-image: nice books;
 
+}
+
+#book-header {
+
+    border-bottom: 2px solid #ccc;
+    font-size: 36px;
+    line-height: 54px;
+    text-align: center;
+
+
+}
+
+#book-header img {
+    height: 6rem;
+    width: auto;
+}
+
+h2 {
+    border-bottom: 2px solid #ccc;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 36px;
+}
+
+p {
+    margin-bottom: 18px;
+
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+
+#books-collection {
+    margin: 2rem;
+}
+
+.main {
+    overflow: hidden;
+}
