@@ -142,7 +142,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function handleChange(event) {
         const author = event.target.value
-        console.log(bookAuthorsArray)
+        debugger;
+        // console.log(bookAuthorsArray)
         // const filteredBooks = bookAuthorsArray.filter(book => book.startsWith(author))
         // const filteredBooksList = createLiElement(filteredBooks)
         // ulcontainer.innerHTML = ""
