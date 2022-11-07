@@ -1,27 +1,17 @@
 
-
-// const hi = "exaple";
-// console.log(hi);
-
 document.addEventListener("DOMContentLoaded", () => {
     getBooks()
     document.getElementById("book-header").addEventListener('click', getBooks)
+
     const dropDown = document.querySelector("#book-dropdown")
+    
     dropDown.addEventListener('change', handleChange)
-    // function handleChange(event) {
-    //     debugger;
-    // }
 
     function getBooks() {
         const ul = document.getElementById("books-collection")
         fetch("http://localhost:3000/books")
             .then(res => res.json())
-            // .then(data => {
-            //     data.forEach(book => {
-            //         ul.innerHTML += `
-            //          <li>${book.name}</li>
-            //         `
-            //     })
+
             .then(books => {
                 let booksHTML = books.map(function (book) {
                     return `
@@ -29,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
                  <h2>${book.name}</h2> 
                  <p> ${book.author}</p>
                  <img src=${book.image} class="book-card" />
-                 <p>${book.price}</p>
                  <p>${book.likes} Likes </p>
                  <button data-id="${books.like}"class="Like-btn">Like ❤️ </button>
                 </ul>
@@ -37,41 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
                 document.querySelector("#books-collection").innerHTML = booksHTML.join('')
             })
-
-
-        //     function createDelete() {
-        //         let btn = document.createElement('button')
-        //         btn.addEventListener('click', deleteBook)
-        //         btn.textContent = 'Delete'
-        // ul.appendChild(btn)
-
-        //     }
-
-        // const deleteBtn = document.getElementById('delete-button');
-
-        //     function deleteBook(e) {
-        //         //delete -button.addEventListener('click', function (e) {
-        //         e.target.parentnode.remove()
-        //     }
-        // }
-        // deleteBook()
-
-
-        // let btn = document.createElement("button")
-        // btn.textContent = 'x'
-        // ul.appendChild(btn)
-
     }
-
 
     addEventListener('click', (e) => {
         if (e.target.className === "Like-btn") {
-
             let currentLike =
                 parseInt(e.target.previousElementSibling.innerText)
             let newLikes = currentLike + 1
             e.target.previousElementSibling.innerText = newLikes + "Likes"
-
 
             fetch(`http://localhost:3000/books
         ${e.target.dataset.id}`, {
@@ -83,13 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify({
                     Like: newLikes
                 })
-
             })
-
         }
-
-
     })
+
+
     // const dropDown = document.querySelector("#book-dropdown")
     // dropDown.addEventListener('change', handleChage)
     // function getBooks() {
@@ -103,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     //             renderLis(booksLis)
     //         })
     // }
-
     // function createLiElement(bookArray) {
     //     return bookArray.map((book) => {
     //         let li = `<li>${book}</li>`
@@ -130,33 +89,94 @@ document.addEventListener("DOMContentLoaded", () => {
     //     })
     // }
 
+
+
+
     let bookAuthorsArray = []
 
     function getAuthors() {
         fetch(" http://localhost:3000/books")
             .then(resp => resp.json())
-            .then(books => {
-                bookAuthorsArray = Object.keys(books)
 
-            })
+        //   bookAuthorsArray = Object.keys(books)
     }
+
+    function renderAllBooks(books) {
+
+
+    }
+
     function handleChange(event) {
         const author = event.target.value
-        debugger;
-        // console.log(bookAuthorsArray)
-        // const filteredBooks = bookAuthorsArray.filter(book => book.startsWith(author))
-        // const filteredBooksList = createLiElement(filteredBooks)
-        // ulcontainer.innerHTML = ""
-        // renderList(filteredBooksList)
+
+        //     //   console.log(bookAuthorsArray)
+        //     // const filteredBooksArray = bookAuthorsArray.filter(book => book.startsWith(author))
+        //     // const filteredBooks = bookAuthorsArray.filter(book => book.startsWith(author))
+        //     // const filteredBooksList = createLiElement(filteredBooks)
+        //     // ul.container.innerHTML = ""
+        //     // renderList(filteredBooksList)
     }
 
+    // getAuthors();
 
-    // function handleChange() {
-    //     debugger;
-    // }
-    getAuthors();
+
+
+
+
 
 })
-// function handleChage() {
-//     debugger;
-// }
+
+
+ //     function createDelete() {
+        //         let btn = document.createElement('button')
+        //         btn.addEventListener('click', deleteBook)
+        //         btn.textContent = 'Delete'
+        // ul.appendChild(btn)
+
+        //     }
+
+        // const deleteBtn = document.getElementById('delete-button');
+
+        //     function deleteBook(e) {
+        //         //delete -button.addEventListener('click', function (e) {
+        //         e.target.parentnode.remove()
+        //     }
+        // }
+        // deleteBook()
+
+
+        // let btn = document.createElement("button")
+        // btn.textContent = 'x'
+        // ul.appendChild(btn)
+
+
+
+
+         // let dropdown = document.getElementById("book-dropdown");
+    // dropdown.length = 0;
+
+    // let defaultOption = document.createElement('option');
+    // defaultOption.text = "Choose Book by Author";
+
+    // dropdown.addEventListener(defaultOption);
+    // dropdown.selectedIndex = 0;
+
+    // const url = "http://localhost:3000/books";
+
+    // const request = new XMLHttpRequest();
+    // request.open("GET", url, true);
+
+    // request.onload = function () {
+    //     if (request.status === 200) {
+    //         const data = JSON.parse(request.responseText);
+
+    //         let option;
+    //         for (let i = 0; i < data.length; i++) {
+    //             option.text = data[i].name;
+    //             option.value = dta[i].author;
+    //             dropdown.addEventListener(option);
+    //         }
+    //     } else {
+
+    //     }
+    // }
