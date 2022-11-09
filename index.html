@@ -11,7 +11,6 @@
             border-radius: 4px;
             padding: 5px;
             width: 150px;
-
         }
 
         .storename {
@@ -26,6 +25,23 @@
         <img src="images/nice books.jpg" alt="image of books" class="center">
     </div>
 
+    <div class="container">
+        <form class="add-book-form">
+            <h3>Create Favorite Book !</h3>
+
+            <input type="text" name="name" value="" placeholder="Enter a book's name" class="input-text" />
+            <br />
+            <input type="text" name="image" value="" placeholder="Enter a book's image URL" class="input-text" />
+            <br />
+            <input type="submit" name="submit" value="Create A Book" class="submit" />
+        </form>
+    </div>
+
+    <p style="text-align:center">
+        Let's Add More Favorite Books ! <button id="new-book-btn">Add a New Book</button>
+    </p>
+
+
     <hr>
     <label for="select-book">Choose Book by Author</label>
     <select id="book-dropdown" name="select-book">
@@ -37,10 +53,8 @@
         <option value="Donna Tartt"> Donna Tartt</option>
         <option value="Charles Dickens"> Charles Dickens</option>
         <option value="Sylvia Nasar">Sylvia Nasar</option>
+
     </select>
-
-
-
 
     <div id="books-collection">
         <div id="info"></div>
