@@ -60,15 +60,14 @@ So how SPA is working ?
     User can click on the "Create A Book" button and add a new event listener - "sumbit". What happens is a user submits a book form.
     How it works? 
         A "POST" request send to "http://localhost:3000/books" and new book adds to the DOM without reloading the page. 
-
-The body should be this:
-},
-body: JSON.stringify({
-    "name": "The Essential RUMI",
-    "author": "Coleman Barks",
-    "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-    "likes": 92
-})
+    The body should be this:
+        },
+     body: JSON.stringify({
+        "name": "The Essential RUMI",
+        "author": "Coleman Barks",
+        "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
+         "likes": 92
+    })
 
 #### Increase a Book's Likes
 
