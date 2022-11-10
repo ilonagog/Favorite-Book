@@ -1,22 +1,9 @@
-// const dropDown = document.querySelector("#book-dropdown")
-//dropDown.addEventListener('change', handleChange)
 
 const addBtn = document.querySelector("#new-book-btn")
-const bookFormContainer = document.querySelector(".container")
+const bookForm = document.querySelector(".container")
 let addBook = false
-if (addBook) {
-    console.log('displaying book form')
-    bookFormContainer.style.display = "block";
-} else {
-    console.log("checking ")
-    bookFormContainer.innerHTML = ""
-
-}
-
 
 const addBookForm = document.querySelector('.add-book-form')
-
-//let addBook = false
 const ul = document.getElementById("books-collection")
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,17 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch("http://localhost:3000/books")
             .then(res => res.json())
             .then(books => {
-                let booksHTML = books.map(function (book) {
+                let booksHTML = books.map(function (books) {
                     return `
                 <ul class="card">
-                 <h2>${book.name}</h2> 
-                 <p> ${book.author}</p>
-                 <img src=${book.image} class="book-card" />
-                 <p>${book.likes} Likes </p>
+                 <h2>${books.name}</h2> 
+                 <p> ${books.author}</p>
+                 <img src=${books.image} class="book-card" />
+                 <p>${books.likes} Likes </p>
                  <button data-id="${books.like}"class="Like-btn">Like ❤️ </button>
-                </ul>
+                </ul>  
                 `
                 })
+                // console.log(booksHTML);
                 document.querySelector("#books-collection").innerHTML = booksHTML.join('')
             })
     }
@@ -46,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function createBook(e) {
         e.preventDefault()
-        console.log(e.target.name)
+        //  console.log(e.target.name)
         const bookName = e.target.name.value
         //  const bookAuthor = e.target.author.value
         const bookImage = e.target.image.value
@@ -76,7 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
                  <button data-id="${newBook.id}"class="Like-btn">Like ❤️ </button>
                  </div>
                        `})
-            .then(document.querySelector("#book-collection").innerHTML += newBookHTML)
+
+        document.querySelector("#book-collection").innerHTML += newBookHTML
         // console.log(e.target.removeEventListener())
     }
 
@@ -102,21 +91,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
-    console.log('addBook', addBook);
+
     addBtn.addEventListener('click', () => {
-        console.log('addBook', addBook);
         addBook = !addBook;
         if (addBook) {
-            bookFormContainer.style.display = "block";
+            bookForm.style.display = "block";
         } else {
-
-            bookFormContainer.innerHTML = "";
+            bookForm.style.display = "";
         }
-        // return addBook;
 
     })
     getBooks()
-    // createBook()
+
 
 })
-
