@@ -1,10 +1,27 @@
 
 const addBtn = document.querySelector("#new-book-btn")
 const bookForm = document.querySelector(".container")
-let addBook = false
+//let addBook = false
 
 const addBookForm = document.querySelector('.add-book-form')
 const ul = document.getElementById("books-collection")
+
+// addBtn.addEventListener('click'), () => {
+//     if (addBookForm.innerHTML = 'visible') {
+
+//         // if (document.getElementsByClassName("add-book-form").removeAttribute('hidden')) {
+//         bookForm.style.display = 'block';
+
+//         // document.getElementById(".add-book-form").style.visibility ='visible';
+//     } else {
+//         bookForm.style.display = "";
+//     }
+
+// }
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -93,14 +110,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     addBtn.addEventListener('click', () => {
-        addBook = !addBook;
-        if (addBook) {
-            bookForm.style.display = "block";
+        // return addBookForm.innerHTML = 'visible';
+        //   document.getElementsByClassName("add-book-form").removeAttribute('hidden')
+        // return bookForm.style.display = 'block';
+
+        // document.getElementById(".add-book-form").style.visibility ='visible';
+
+        //  bookForm.style.display = "";
+
+        let someCondition = true;
+
+        if (someCondition == true) {
+            document.getElementsByClassName("add-book-form").hidden = false;
+            bookForm.style.display = 'block';
         } else {
             bookForm.style.display = "";
         }
 
+
+
     })
+
+
+
+
+
+    // addBtn.addEventListener('click', () => {
+    //     addBook = !addBook;
+    //     if (addBook) {
+    //         bookForm.style.display = "block";
+    //     } else {
+    //         bookForm.style.display = "";
+    //     }
+
+    // })
     getBooks()
 
 
