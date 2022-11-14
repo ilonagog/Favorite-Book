@@ -1,44 +1,112 @@
-
-const addBtn = document.querySelector("#new-book-btn")
-const bookForm = document.querySelector(".container")
-//let addBook = false
-
-const addBookForm = document.querySelector('.add-book-form')
-const ul = document.getElementById("books-collection")
-
-// addBtn.addEventListener('click'), () => {
-//     if (addBookForm.innerHTML = 'visible') {
-
-//         // if (document.getElementsByClassName("add-book-form").removeAttribute('hidden')) {
-//         bookForm.style.display = 'block';
-
-//         // document.getElementById(".add-book-form").style.visibility ='visible';
-//     } else {
-//         bookForm.style.display = "";
-//     }
-
-// }
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    document.getElementById("book-header").addEventListener('click', getBooks)
+    const addBtn = document.querySelector("#new-book-btn")
+    // const bookForm = document.querySelector(".container")
+    //  let book;
+    const addBookForm = document.querySelector('.add-book-form')
+    const div = document.getElementById("books-collection")
+    //  let books;
 
+    addBookForm.addEventListener('submit', createBook)
+    //create a new favorite book
+    // send POST request , 
+
+
+
+    // document.getElementById("book-header").addEventListener('click', getBooks)
+    // send fetch request , get all books,and return them on the card 
+    //create card 
+    function renderBook(book) {
+        let card = document.createElement('li')
+        card.className = 'card'
+        card.innerHTML = `
+        <ul class="card">
+        <h2>${book.name}</h2> 
+        <p> ${book.author}</p>
+        <img src=${book.image} class="book-card" />
+       <p>${book.likes} Likes </p>
+        <button data-id="${book.id}"class="Like-btn">Like ❤️ </button>
+        </ul>  
+        `
+        // add animal card to DOM
+        div.appendChild(card)
+    }
+
+
+
+    //Initial render
+    function initialize() {
+        getAllBooks()
+    }
+    initialize()
+
+    // make more likes on each book 
+    // update likes by adding every additional like th euser will make 
+    addEventListener('click', (e) => {
+        if (e.target.className === "Like-btn") {
+            let currentLike =
+                parseInt(e.target.previousElementSibling.innerText)
+            let newLikes = currentLike + 1
+            e.target.previousElementSibling.innerText = newLikes + "Likes"
+            const url = `http://localhost:3000/books/${e.target.dataset.id}`
+            // use PATCH request to make an update for new likes 
+            fetch(url, {
+                method: "PATCH",
+                headers: {
+                    'Content-Type': "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    Like: newLikes
+                })
+            })
+        }
+    })
+
+
+    //add a  click event listener to the 'new-book-btn'
+    // each time the button is clicked if the form element is hidden, 
+    //show it , otherwise hide the for again 
+    // const addBtn = document.querySelector("#new-book-btn")
+    addBtn.addEventListener('click', () => {
+        // const addBookForm = document.querySelector('.add-book-form');
+        if (addBookForm.style.display === '' || addBookForm.style.display === 'none') {
+            addBookForm.style.display = 'block';
+        } else {
+            addBookForm.style.display = 'none';
+        }
+    });
+
+})
+
+
+/*
+document.addEventListener("DOMContentLoaded", () => {
+
+    const addBtn = document.querySelector("#new-book-btn")
+    const bookForm = document.querySelector(".container")
+    //let addBook = false
+
+    const addBookForm = document.querySelector('.add-book-form')
+    const ul = document.getElementById("books-collection")
+
+    //document.addEventListener("DOMContentLoaded", () => {
+
+    document.getElementById("book-header").addEventListener('click', getBooks)
+    // send fetch request , get all books,and return them on the card 
+    //create card 
     function getBooks() {
         fetch("http://localhost:3000/books")
             .then(res => res.json())
             .then(books => {
-                let booksHTML = books.map(function (books) {
+                let booksHTML = books.map(function (book) {
                     return `
                 <ul class="card">
-                 <h2>${books.name}</h2> 
-                 <p> ${books.author}</p>
-                 <img src=${books.image} class="book-card" />
-                 <p>${books.likes} Likes </p>
-                 <button data-id="${books.like}"class="Like-btn">Like ❤️ </button>
+                 <h2>${book.name}</h2> 
+                 <p> ${book.author}</p>
+                 <img src=${book.image} class="book-card" />
+                 <p>${book.likes} Likes </p>
+                 <button data-id="${book.id}"class="Like-btn">Like ❤️ </button>
                 </ul>  
                 `
                 })
@@ -48,7 +116,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     addBookForm.addEventListener('submit', createBook)
-
+    //create a new favorite book
+    // send POST request , 
+    //
     function createBook(e) {
         e.preventDefault()
         //  console.log(e.target.name)
@@ -80,22 +150,25 @@ document.addEventListener("DOMContentLoaded", () => {
                  <p>${newBook.likes} Likes </p>
                  <button data-id="${newBook.id}"class="Like-btn">Like ❤️ </button>
                  </div>
-                       `})
-
+                       `
+            })
+        // console.log(newBookHTML);
+        debugger
         document.querySelector("#book-collection").innerHTML += newBookHTML
         // console.log(e.target.removeEventListener())
     }
 
-
+    // make more likes on each book 
+    // update likes by adding every additional like th euser will make 
     addEventListener('click', (e) => {
         if (e.target.className === "Like-btn") {
             let currentLike =
                 parseInt(e.target.previousElementSibling.innerText)
             let newLikes = currentLike + 1
             e.target.previousElementSibling.innerText = newLikes + "Likes"
-
-            fetch(`http://localhost:3000/books
-        ${e.target.dataset.id}`, {
+            const url = `http://localhost:3000/books/${e.target.dataset.id}`
+            // use PATCH request to make an update for new likes 
+            fetch(url, {
                 method: "PATCH",
                 headers: {
                     'Content-Type': "application/json",
@@ -109,42 +182,20 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 
+
+    //add a  click event listener to the 'new-book-btn'
+    // each time the button is clicked if the form element is hidden, 
+    //show it , otherwise hide the for again 
+    // const addBtn = document.querySelector("#new-book-btn")
     addBtn.addEventListener('click', () => {
-        // return addBookForm.innerHTML = 'visible';
-        //   document.getElementsByClassName("add-book-form").removeAttribute('hidden')
-        // return bookForm.style.display = 'block';
 
-        // document.getElementById(".add-book-form").style.visibility ='visible';
-
-        //  bookForm.style.display = "";
-
-        let someCondition = true;
-
-        if (someCondition == true) {
-            document.getElementsByClassName("add-book-form").hidden = false;
-            bookForm.style.display = 'block';
+        // const addBookForm = document.querySelector('.add-book-form');
+        if (addBookForm.style.display === '' || addBookForm.style.display === 'none') {
+            addBookForm.style.display = 'block';
         } else {
-            bookForm.style.display = "";
+            addBookForm.style.display = 'none';
         }
-
-
-
-    })
-
-
-
-
-
-    // addBtn.addEventListener('click', () => {
-    //     addBook = !addBook;
-    //     if (addBook) {
-    //         bookForm.style.display = "block";
-    //     } else {
-    //         bookForm.style.display = "";
-    //     }
-
-    // })
+    });
     getBooks()
-
-
 })
+*/

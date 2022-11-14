@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+
     <title>The BookStore</title>
     <style>
         img {
@@ -30,7 +32,11 @@
 
             <input type="text" name="name" value="" placeholder="Enter a book's name" class="input-text" />
             <br />
+            <input type="text" name="author" value="" placeholder="Enter a book's Author" class="input-text" />
+            <br />
             <input type="text" name="image" value="" placeholder="Enter a book's image URL" class="input-text" />
+            <br />
+            <input type="text" name="likes" value="" placeholder="Enter number of book's likes" class="input-text" />
             <br />
             <input type="submit" name="submit" value="Create A Book" class="submit" />
         </form>
@@ -43,7 +49,6 @@
     <hr>
 
     <div id="books-collection"></div>
-    <script src="index.js"></script>
 </body>
 
 </html>

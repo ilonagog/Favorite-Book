@@ -5,7 +5,8 @@
       "name": "The Silent Patient",
       "author": "Alex Michaelides",
       "image": "https://m.media-amazon.com/images/I/41bsvxNUSdL._AC_SY780_.jpg",
-      "likes": 94
+      "likes": 94,
+      "Like": 95
     },
     {
       "id": 2,
@@ -71,165 +72,18 @@
       "likes": 93
     },
     {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
+      "name": "- [ ] The Sun, The Moon and The Wheat Field (მზე, მთვარე და პურის ყანა)",
+      "author": "- [ ] Temur Babluani",
+      "image": "https://rights.sulakauri.ge/wp-content/uploads/2018/08/%E1%83%9B%E1%83%96%E1%83%94-%E1%83%9B%E1%83%97%E1%83%95%E1%83%90%E1%83%A0%E1%83%94-%E1%83%93%E1%83%90-%E1%83%9E%E1%83%A3%E1%83%A0%E1%83%98%E1%83%A1-%E1%83%A7%E1%83%90%E1%83%9C%E1%83%90.gif",
+      "likes": "97",
       "id": 11
     },
     {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 13
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 14
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 15
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 16
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 17
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 18
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 19
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 20
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 21
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 22
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 23
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 24
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 25
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 26
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 27
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 28
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 29
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 30
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 31
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 32
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 33
-    },
-    {
-      "name": "The Essential RUMI",
-      "author": "Coleman Barks",
-      "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-      "likes": 92,
-      "id": 34
+      "name": "The Sun, The Moon and The Wheat Field (მზე, მთვარე და პურის ყანა)",
+      "author": "Temur Babluani",
+      "image": "https://rights.sulakauri.ge/wp-content/uploads/2018/08/%E1%83%9B%E1%83%96%E1%83%94-%E1%83%9B%E1%83%97%E1%83%95%E1%83%90%E1%83%A0%E1%83%94-%E1%83%93%E1%83%90-%E1%83%9E%E1%83%A3%E1%83%A0%E1%83%98%E1%83%A1-%E1%83%A7%E1%83%90%E1%83%9C%E1%83%90.gif",
+      "likes": "97",
+      "id": 12
     }
   ]
 }
