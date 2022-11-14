@@ -7,7 +7,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const div = document.getElementById("books-collection")
     //  let books;
 
-
+    addBookForm.addEventListener('submit', createBook)
+    //create a new favorite book
+    // send POST request , 
+    function createBook(e) {
+        e.preventDefault()
+        let bookObj = {
+            //  console.log(e.target.name)
+            name: e.target.name.value,
+            author: e.target.author.value,
+            image: e.target.image.value,
+            likes: e.target.likes.value // can i delete likes from here?
+        }
+        renderBook(bookObj)
+        addBook(bookObj)
+    }
 
 
     // document.getElementById("book-header").addEventListener('click', getBooks)
@@ -83,4 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 })
+
+
 
