@@ -20,7 +20,8 @@
       "name": "The Metamorphosis",
       "author": "Franz Kafka",
       "image": "https://m.media-amazon.com/images/I/51mGSj0VDLL.jpg",
-      "likes": 77
+      "likes": 77,
+      "Like": 78
     },
     {
       "id": 4,
@@ -72,25 +73,11 @@
       "likes": 93
     },
     {
-      "name": "",
-      "author": "",
-      "image": "",
-      "likes": "",
+      "name": "harry pottter",
+      "author": "J. K. Rowling",
+      "image": "https://target.scene7.com/is/image/Target/GUEST_f23d73cf-1699-4248-a6bf-471ef08a4a65?wid=488&hei=488&fmt=pjpeg",
+      "likes": "97",
       "id": 11
-    },
-    {
-      "name": "",
-      "author": "",
-      "image": "",
-      "likes": "",
-      "id": 12
-    },
-    {
-      "name": "",
-      "author": "",
-      "image": "",
-      "likes": "",
-      "id": 13
     }
   ]
 }

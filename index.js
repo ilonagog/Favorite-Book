@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
             image: e.target.image.value,
             likes: e.target.likes.value // can i delete likes from here????
         }
-        renderBook(bookObj)
         addBook(bookObj)
+        renderBook(bookObj)
         addBookForm.reset();
     }
 
@@ -65,12 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
             body: JSON.stringify(bookObj)
         })
             .then(resp => resp.json())
-            .then(book => addBookForm.append(book))
+            //book => addBookForm.append(book))
+            .then((book) => console.log(book))
+            .catch((error) => console.error('Error:', error))
     }
 
     //Initial render
     function initialize() {
         getAllBooks()
+
     }
     initialize()
 
