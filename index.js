@@ -34,6 +34,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+    function addBook(bookObj) {
+        fetch("http://localhost:3000/books", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(bookObj)
+        })
+            .then(resp => resp.json())
+            .then(book => console.log(book))
+    }
+
     //Initial render
     function initialize() {
         getAllBooks()
