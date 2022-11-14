@@ -7,20 +7,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const div = document.getElementById("books-collection")
     //  let books;
 
-    addBookForm.addEventListener('submit', createBook)
+    addBookForm.addEventListener('submit', createNewBook)
+    //addBookForm.reset();
     //create a new favorite book
     // send POST request , 
-    function createBook(e) {
+    function createNewBook(e) {
         e.preventDefault()
         let bookObj = {
             //  console.log(e.target.name)
             name: e.target.name.value,
             author: e.target.author.value,
             image: e.target.image.value,
-            likes: e.target.likes.value // can i delete likes from here?
+            likes: e.target.likes.value // can i delete likes from here????
         }
         renderBook(bookObj)
         addBook(bookObj)
+        addBookForm.reset();
     }
 
 
@@ -28,14 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // send fetch request , get all books,and return them on the card 
     //create card 
     function renderBook(book) {
+        //  debugger                will get first book ????
         let card = document.createElement('li')
-        card.className = 'card'
+        // card.className = 'card'
         card.innerHTML = `
         <ul class="card">
         <h2>${book.name}</h2> 
         <p> ${book.author}</p>
         <img src=${book.image} class="book-card" />
-       <p>${book.likes} Likes </p>
+        <p>${book.likes} Likes </p>
         <button data-id="${book.id}"class="Like-btn">Like ❤️ </button>
         </ul>  
         `
@@ -56,12 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch("http://localhost:3000/books", {
             method: "POST",
             headers: {
+                "Accept": "application/json",
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(bookObj)
         })
             .then(resp => resp.json())
-            .then(book => console.log(book))
+            .then(book => addBookForm.append(book))
     }
 
     //Initial render
@@ -83,8 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
             fetch(url, {
                 method: "PATCH",
                 headers: {
-                    'Content-Type': "application/json",
-                    "Accept": "application/json"
+                    "Accept": "application/json",
+                    'Content-Type': "application/json"
                 },
                 body: JSON.stringify({
                     Like: newLikes
