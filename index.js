@@ -6,23 +6,48 @@ document.addEventListener("DOMContentLoaded", () => {
     const addBookForm = document.querySelector('.add-book-form')
     const div = document.getElementById("books-collection")
     //  let books;
-
+    let bookObj;
     addBookForm.addEventListener('submit', createNewBook)
     //addBookForm.reset();
     //create a new favorite book
-    // send POST request , 
     function createNewBook(e) {
         e.preventDefault()
         let bookObj = {
+            // if(bookObj = null || bookObj == " ") {
+            //     return alert("Please Fill All Required Field")
+            //     return false;
+            // }
+            // else {
             //  console.log(e.target.name)
             name: e.target.name.value,
             author: e.target.author.value,
             image: e.target.image.value,
             likes: e.target.likes.value // can i delete likes from here????
         }
+        validateForm(bookObj)
         addBook(bookObj)
         renderBook(bookObj)
-        addBookForm.reset();
+        addBookForm.reset()
+        // validateForm(bookObj)
+
+    }
+    let valid;
+    function validateForm() {
+        if (valid = true,
+            //addBookForm.style.display === '' || addBookForm.style.display === 'none'     
+            addBookForm.name.value === "" || addBookForm.name.value === "none",
+            addBookForm.author.value === "" || addBookForm.author.value === "none",
+            addBookForm.image.value === "" || addBookForm.image.value === "none",
+            addBookForm.likes.value === "" || addBookForm.likes.value === "none"
+
+            // addBookForm.author.value == "",
+            // addBookForm.image.value = "",
+            // addBookForm.likes.value = " "
+        ) {
+            alert("Please Fill the Information !");
+            valid = false;
+        }
+        return true;
     }
 
 
@@ -114,6 +139,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+
 })
-
-
