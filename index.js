@@ -31,23 +31,20 @@ document.addEventListener("DOMContentLoaded", () => {
         // validateForm(bookObj)
 
     }
-    let valid;
+
     function validateForm() {
-        if (valid = true,
-            //addBookForm.style.display === '' || addBookForm.style.display === 'none'     
+        valid = true;
+        if (
             addBookForm.name.value === "" || addBookForm.name.value === "none",
             addBookForm.author.value === "" || addBookForm.author.value === "none",
             addBookForm.image.value === "" || addBookForm.image.value === "none",
             addBookForm.likes.value === "" || addBookForm.likes.value === "none"
-
-            // addBookForm.author.value == "",
-            // addBookForm.image.value = "",
-            // addBookForm.likes.value = " "
         ) {
-            alert("Please Fill the Information !");
+            alert("Please Fill the Information !")
             valid = false;
         }
-        return true;
+        return valid;
+
     }
 
 
@@ -91,8 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
         })
             .then(resp => resp.json())
             //book => addBookForm.append(book))
-            .then((book) => console.log(book))
-            .catch((error) => console.error('Error:', error))
+            .then((book) => (book))
+            .catch((error) => error('Error:', error))
     }
 
     //Initial render
