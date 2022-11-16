@@ -5,8 +5,7 @@
       "name": "The Silent Patient",
       "author": "Alex Michaelides",
       "image": "https://m.media-amazon.com/images/I/41bsvxNUSdL._AC_SY780_.jpg",
-      "likes": 94,
-      "Like": 95
+      "likes": 94
     },
     {
       "id": 2,
@@ -20,8 +19,7 @@
       "name": "The Metamorphosis",
       "author": "Franz Kafka",
       "image": "https://m.media-amazon.com/images/I/51mGSj0VDLL.jpg",
-      "likes": 77,
-      "Like": 78
+      "likes": 77
     },
     {
       "id": 4,
@@ -70,14 +68,8 @@
       "name": "Have A Little Faith",
       "author": "Mitchel Albom",
       "image": "https://upload.wikimedia.org/wikipedia/en/f/f3/Have_A_little_Faith_Cover.jpg",
-      "likes": 93
-    },
-    {
-      "name": "",
-      "author": "",
-      "image": "",
-      "likes": "",
-      "id": 11
+      "likes": 93,
+      "Like": 98
     }
   ]
 }
