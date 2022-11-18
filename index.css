@@ -18,7 +18,8 @@ body {
 }
 
 h2 {
-    border-bottom: 2px solid #ccc;
+    font-style: italic;
+    border-bottom: 2px solid black;
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 16px;
@@ -30,7 +31,14 @@ h3 {
     line-height: 36px;
 }
 
+h4 {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 36px;
+}
+
 p {
+
     margin-bottom: 20px;
     font-style: italic;
     font-size: 150%;
@@ -38,8 +46,10 @@ p {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: block;
+    position: relative;
     max-width: 300px;
-    margin: auto;
+    margin-right: 5px;
     text-align: center;
     font-family: arial;
     background-color: whitesmoke;
@@ -79,8 +89,5 @@ p {
 
 #books-collection {
     margin: 2rem;
-}
 
-.main {
-    overflow: hidden;
 }
