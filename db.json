@@ -5,7 +5,7 @@
       "name": "The Silent Patient",
       "author": "Alex Michaelides",
       "image": "https://m.media-amazon.com/images/I/41bsvxNUSdL._AC_SY780_.jpg",
-      "likes": 15
+      "likes": 19
     },
     {
       "id": 2,
@@ -26,21 +26,21 @@
       "name": "An Antropologist On Mars",
       "author": "Oliver Sacks",
       "image": "https://m.media-amazon.com/images/I/51w3DJPRRoL._AC_SY780_.jpg",
-      "likes": 0
+      "likes": 3
     },
     {
       "id": 5,
       "name": "Awakenings",
       "author": "Oliver Sacks",
       "image": "https://m.media-amazon.com/images/I/61ARGlQMjzL._AC_SY780_.jpg",
-      "likes": 0
+      "likes": 6
     },
     {
       "id": 6,
       "name": "The Secret History",
       "author": "Donna Tartt",
       "image": "https://upload.wikimedia.org/wikipedia/en/a/a5/The_Secret_History%2C_front_cover.jpg",
-      "likes": 0
+      "likes": 5
     },
     {
       "id": 7,

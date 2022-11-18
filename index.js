@@ -100,6 +100,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    function increaseLikes(book, likesElement) {
+        ++book.likes;
+        likesElement.textContent = book.likes;
+
+        fetch(fetchUrl + `/${book.id}`
+            , {
+                method: "PATCH",
+                headers: {
+                    "Accept": "application/json",
+                    'Content-Type': "application/json"
+                },
+                body: JSON.stringify(book)
+            })
+            .then(resp => resp.json())
+            .then(book => (book))
+            .catch(error => alert(error))
+    }
 
 })
 
