@@ -82,6 +82,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
+    function addBook(formData) {
+        fetch(fetchUrl, {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(resp => resp.json())
+            .then((book) => renderBook(book)
+                // console.log(formData)
+                // console.log(book)
+            )
+            .catch((error) => error('Error:', error))
+    }
+
 
 
 })
