@@ -19,11 +19,10 @@
 
         A callback function can run after another function has finished. "
 
-    - I am using 'DOMContentLoaded' event listener, 'click' and 'change'
+    - I am using 'DOMContentLoaded' event listener, 'click' and 'submit'
 
 3 
-    - I use 'map()' array iteration method. What is array iteration method?- So, array iteration method performs some operation on each element of array. The 'map()' method creates a new array, does not change the original array. 
-
+    - I use 'forEach()' array iteration method. What is array iteration method?- So, array iteration method performs some operation on each element of array. 
 4 
     - Application should be single page.
 
@@ -32,9 +31,7 @@
 I have created a Single Page Application in JavaScript. Here I worked on HTML, CSS, JS files, created 
 JSON server for my favorite books. 
 
-In this application user can see the list of my favorite books, like any of them, also user can filter books 
-based on an author's name. 
-
+In this application user can see the list of my favorite books, like any of them, and add new favorite book.
 So how SPA is working ? 
 
 
@@ -45,13 +42,8 @@ So how SPA is working ?
  
     I can access the list of books from db.json and render each one in the "card"(which i will create) on my web page. 
 
-        To Fetch a Book : When i make a "GET" request to fetch all the book objects, i made  a  '<ul class ="card">' for each book and added it to the 'div'.
-        Each card should have the following child elements:
-            - '<h2>' tag for the book's name
-            - '<p>' tag for the book's author
-            - '<img>' tag with the 'src' of the book's image attribute and the class name "book-card"
-            - '<p>' tag with likes number
-            - '<button> tag with the class "Like-btn" and an id attribute set to the book's id number
+        To Fetch a Book : When i make a "GET" request to fetch all the book objects.
+        I created book card elements in index.js. 
 
     User can "click" on the "like" button to express their love for a certain book.
 
@@ -60,30 +52,39 @@ So how SPA is working ?
     User can click on the "Create A Book" button and add a new event listener - "sumbit". What happens is a user submits a book form.
     How it works? 
         A "POST" request send to "http://localhost:3000/books" and new book adds to the DOM without reloading the page. 
-    The body should be this:
-        },
-     body: JSON.stringify({
-        "name": "The Essential RUMI",
-        "author": "Coleman Barks",
-        "image": "https://cdn.shopify.com/s/files/1/0285/2821/4050/products/9780062046659_106a2888-c25e-4122-b125-6fb573f57076_424x.jpg?v=1667491936",
-         "likes": 92
-    })
+       fetch(fetchUrl, {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(resp => resp.json())
+            .then((book) => renderBook(book)
+            )
+            .catch((error) => error('Error:', error))
 
 #### Increase a Book's Likes
 
  When a user choses favorite book and clicks on a like button, that click should :
 
     - tridgger the  "PATCH" request- "method: "PATCH", by which requests should be sent to the server at  
-    "http://localhost:3000/books" , updating the number of the likes that the favorite book will have
+    "http://localhost:3000/books" + book id , updating the number of the likes that the favorite book will have
 
-            method: "PATCH",
+            fetch(fetchUrl + `/${book.id}`,
+            {
+                method: "PATCH",
                 headers: {
-                    'Content-Type': "application/json",
-                    "Accept": "application/json"
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify({
-                    Like: newLikes
-                })
+                body: JSON.stringify(book)
+            })
+            .then(resp => resp.json())
+            .then(book => (book))
+            .catch(error => alert(error))
+    }
 
     - If the request will be successful , we will sew the update in "likes" number without reloading the page, and this everything happens in the DOM!
 
@@ -93,4 +94,9 @@ So how SPA is working ?
 
 #### Check a work
 
-    It is very important to check a work, console.log() or debugger helps a lot! To do that open 'index.html' in the browser, go to Developer Tools.  
+    It is very important to check a work, console.log() or debugger helps a lot! To do that i open 'index.html' in the browser, go to Developer Tools.  
+
+##### Book summary  
+    I used "https://www.goodreads.com" for books summary and books information.
+
+    
