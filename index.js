@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const bookCard = document.createElement('div');
         const bookName = document.createElement('h2');
         const bookAuthor = document.createElement('h4');
-        const bookInfo = document.createElement('h6');
+        const bookSummary = document.createElement('h6');
         const bookImg = document.createElement('img');
         const likesNum = document.createElement('h5');
         const likeBtn = document.createElement('button');
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bookCard.className = "book-card";
         bookName.textContent = book.name;
         bookAuthor.textContent = book.author;
-        bookInfo.textContent = book.info;
+        bookSummary.textContent = book.summary;
         bookImg.src = book.image;
         likesNum.textContent = book.likes;
 
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         likeBtn.className = "likes-btn";
         likeBtn.textContent = "Like ❤️";
 
-        bookCard.append(bookName, bookAuthor, bookInfo, bookImg, likesNum, likeBtn);
+        bookCard.append(bookName, bookAuthor, bookSummary, bookImg, likesNum, likeBtn);
 
         bookConteiner.append(bookCard);
 
