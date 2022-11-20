@@ -8,21 +8,25 @@ document.addEventListener("DOMContentLoaded", () => {
         const bookCard = document.createElement('div');
         const bookName = document.createElement('h2');
         const bookAuthor = document.createElement('h4');
+        const bookInfo = document.createElement('h6');
         const bookImg = document.createElement('img');
         const likesNum = document.createElement('h5');
         const likeBtn = document.createElement('button');
+
 
         bookCard.id = `book-${book.id}`;
         bookCard.className = "book-card";
         bookName.textContent = book.name;
         bookAuthor.textContent = book.author;
+        bookInfo.textContent = book.info;
         bookImg.src = book.image;
         likesNum.textContent = book.likes;
+
 
         likeBtn.className = "likes-btn";
         likeBtn.textContent = "Like ❤️";
 
-        bookCard.append(bookName, bookAuthor, bookImg, likesNum, likeBtn);
+        bookCard.append(bookName, bookAuthor, bookInfo, bookImg, likesNum, likeBtn);
 
         bookConteiner.append(bookCard);
 
@@ -46,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let bookObj = {
             name: e.target.name.value,
             author: e.target.author.value,
+            info: e.target.info.value,
             image: e.target.image.value,
             likes: e.target.likes.value
         }
@@ -89,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 method: "PATCH",
                 headers: {
                     "Accept": "application/json",
-                    'Content-Type': "application/json"
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify(book)
             })

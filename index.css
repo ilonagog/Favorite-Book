@@ -1,12 +1,12 @@
 body {
-    background-color: lavender;
-    background-image: nice books;
-
+    height: 200px;
+    background-color: #cccccc;
+    background-image: linear-gradient(110deg, rgb(200, 190, 221), violet);
+    background-image: -moz-element();
 }
 
 #book-header {
-
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px;
     font-size: 24px;
     line-height: 54px;
     text-align: center;
@@ -17,7 +17,13 @@ body {
     width: 500px;
 }
 
+h1 {
+    font-style: italic;
+    color: black
+}
+
 h2 {
+    margin: 5rem;
     font-style: italic;
     border-bottom: 2px solid black;
     font-size: 24px;
@@ -32,27 +38,40 @@ h3 {
 }
 
 h4 {
+    margin: 18px;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+h5 {
+    font-size: 18px;
+    margin: 18px;
+}
+
+h6 {
+    text-align: right;
+    margin: 18px;
     font-style: italic;
     font-size: 18px;
     line-height: 36px;
 }
 
 p {
-
     margin-bottom: 20px;
     font-style: italic;
     font-size: 150%;
 }
 
 .card {
+    background-color: antiquewhite;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     display: block;
-    position: relative;
+    position: center;
     max-width: 300px;
-    margin-right: 5px;
     text-align: center;
     font-family: arial;
-    background-color: whitesmoke;
+    color: antiquewhite;
 }
 
 .add-book-form {
@@ -60,8 +79,7 @@ p {
 }
 
 .submit {
-    background-color: #4CAF50;
-    border: none;
+    background-color: cornflowerblue;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -70,6 +88,7 @@ p {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 50px;
 }
 
 .submit:hover {
@@ -79,15 +98,42 @@ p {
 }
 
 .input-text {
-    border-radius: 5px;
-    height: 2rem;
-    width: 60%;
-    font-size: 18px;
-    font-style: italic;
-    margin: 3px;
+    border: 1px solid royalblue;
+    width: 300px;
+    border-radius: 50px;
+    padding: 10px;
+
 }
 
-#books-collection {
-    margin: 2rem;
+#new-book-btn {
+    border: 1px solid royalblue;
+    background-color: antiquewhite;
+    width: 200px;
+    border-radius: 50px;
+    padding: 10px;
+}
 
+.likes-btn {
+    border: 1px solid royalblue;
+    width: 80px;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: antiquewhite;
+    position: relative;
+    margin: 18px;
+}
+
+.info-btn {
+    border: 1px solid royalblue;
+    width: 100px;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+
+#books-collection {
+    border-radius: 50px;
+    margin: 10rem;
+    background-image: linear-gradient(110deg, rgb(200, 190, 221), violet);
 }

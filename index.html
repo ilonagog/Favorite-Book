@@ -9,12 +9,15 @@
     <title>The BookStore</title>
     <style>
         img {
-            margin: center;
-
+            margin: 20px;
             border: center;
             border-radius: 4px;
             padding: 5px;
             width: 150px;
+        }
+
+        h6 {
+            text-align: right;
         }
 
         .title {
@@ -27,36 +30,28 @@
     <div id="book-header">
         <h1> Favorite Books</h1>
     </div>
-
     <div class="container">
-        <div class="row">
-            <form hidden class="add-book-form">
-                <h3>Create Favorite Book !</h3>
+        <form hidden class="add-book-form">
+            <h3>Create Favorite Book !</h3>
 
-                <input type="text" name="name" value="" placeholder=" Name" class="input-text" />
-                <br />
-                <input type="text" name="author" value="" placeholder=" Author" class="input-text" />
-                <br />
-                <input type="text" name="image" value="" placeholder=" Image URL" class="input-text" />
-                <br />
-                <input type="text" name="likes" value="" placeholder=" Likes" class="input-text" />
-                <br />
-                <input type="submit" name="submit" value="Create A Book" class="submit" />
-            </form>
-
-        </div>
-
+            <input type="text" name="name" value="" placeholder=" Name" class="input-text" />
+            <br />
+            <input type="text" name="author" value="" placeholder=" Author" class="input-text" />
+            <br />
+            <input type="text" name="info" value="" placeholder=" Book Summary" class="input-text" />
+            <br />
+            <input type="text" name="image" value="" placeholder=" Image URL" class="input-text" />
+            <br />
+            <input type="text" name="likes" value="" placeholder=" Add your Likes" class="input-text" />
+            <br />
+            <input type="submit" name="submit" value="Create A Book" class="submit" />
+        </form>
     </div>
-    <br />
-
     <p style="text-align:center">
         Let's Add More Favorite Books ! <button id="new-book-btn">Add a New Book</button>
     </p>
-
-    <hr>
-
-    <div class="row" id="books-collection"></div>
-
+    <div id="books-collection"></div>
+    <br>
 </body>
 
 </html>
